@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Event Registration</title>
+</head>
+<body>
+
+<h2 style="text-align:center;">College Event Registration</h2>
+
+<!-- Audio Invitation -->
+<h3>Event Invitation</h3>
+<audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<form>
+
+<!-- Name -->
+<label>Student Name:</label><br>
+<input type="text" required><br><br>
+
+<!-- Email with pattern -->
+<label>Email:</label><br>
+<input type="email" pattern=".+@.+\.com" required><br><br>
+
+<!-- Department -->
+<label>Department:</label><br>
+<input type="text" required><br><br>
+
+<!-- Events -->
+<label>Select Events:</label><br>
+<input type="checkbox" name="event" value="Dance"> Dance<br>
+<input type="checkbox" name="event" value="Coding"> Coding<br>
+<input type="checkbox" name="event" value="Singing"> Singing<br><br>
+
+<!-- File Upload -->
+<label>Upload Performance (mp3/mp4 only):</label><br>
+<input type="file" accept=".mp3, .mp4" required><br><br>
+
+<!-- Submit -->
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>

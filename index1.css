@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+
+    <section class="p1">
+        <h1>Practice 1</h1>
+        <p>This is internal CSS (blue heading, 18px text).</p>
+    </section>
+
+    <section class="p2">
+        <h1>Practice 2</h1>
+        <p>This text was originally inline CSS.</p>
+    </section>
+
+</body>
+</html>
+        /* Practice 1 */
+        .p1 h1 {
+            color: blue;
+        }
+        .p1 p {
+            font-size: 18px;
+        }
+
+        /* Practice 2 (converted from inline to internal) */
+        .p2 p {
+            color: red;
+            background-color: yellow;
+            font-size: 20px;
+        }
+
+        /* Practice 3 */
+        .p3 p {
+            color: green;
+        }
+        .p3 div {
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .p3 h1 {
+            text-align: center;
+        }
+
+        /* Practice 4 (converted external → internal) */
+        .p4 {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .p4 h2 {
+            color: purple;
+        }
+        .p4 p {
+            font-size: 16px;
+        }
+
+        /* Practice 5 (priority simulation) */
+        .p5 p {
+            color: green; /* acts like internal */
+        }
+
+        /* Practice 6 (Mini Project) */
+        .p6 {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .p6 h1 {
+            color: darkblue;
+            text-align: center;
+        }
+        .p6 p {
+            font-size: 18px;
+            color: darkgreen;
+        }
+        .p6 div {
+            background-color: pink;
+            padding: 10px;
+        }
+
+</head>
+<body>
+
+    /* Practice 1 */
+.p1 h1 {
+    color: blue;
+}
+
+.p1 p {
+    font-size: 18px;
+}
+
+/* Practice 2 */
+.p2 p {
+    color: red;
+    background-color: yellow;
+    font-size: 20px;
+}
+
+    <!-- Practice 2 -->
+    <section class="p2">
+        <h1>Practice 2</h1>
+        <p>This text was originally inline CSS (now internal).</p>
+    </section>
+
+    <hr>
+
+    <!-- Practice 3 -->
+    <section class="p3">
+        <h1>Practice 3</h1>
+        <p>This paragraph is green.</p>
+        <div>This div has light gray background.</div>
+    </section>
+
+    <hr>
+
+    <!-- Practice 4 -->
+    <section class="p4">
+        <h2>Practice 4</h2>
+        <p>External CSS converted to internal CSS.</p>
+    </section>
+
+    <hr>
+
+    <!-- Practice 5 -->
+    <section class="p5">
+        <h1>Practice 5</h1>
+        <p style="color: red;">Final color is RED (inline wins).</p>
+    </section>
+
+    <hr>
+
+    <!-- Practice 6 -->
+    <section class="p6">
+        <h1>Aishwarya</h1>
+        <p>I am an engineering student.</p>
+        <div>Details: Loves coding and creativity.</div>
+    </section>
+
+</body>
+</html>

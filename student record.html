@@ -1,0 +1,87 @@
+// App.js
+import React, { useState } from "react";
+
+// StudentForm Component
+function StudentForm({ addStudent }) {
+
+  const [name, setName] = useState("");
+
+  const handleSubmit = () => {
+    if (name.trim() !== "") {
+      addStudent(name);
+      setName("");
+    }
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Enter Student Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <button onClick={handleSubmit}>
+        Add Student
+      </button>
+    </div>
+  );
+}
+
+// StudentList Component
+function StudentList({ students, deleteStudent }) {
+
+  return (
+    <div>
+      <h2>Student List</h2>
+
+      <ul style={{ listStyle: "none" }}>
+        {students.map((student, index) => (
+          <li key={index} style={{ margin: "10px" }}>
+            {student}
+
+            <button
+              onClick={() => deleteStudent(index)}
+              style={{ marginLeft: "10px" }}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Main App Component
+function App() {
+
+  const [students, setStudents] = useState([]);
+
+  // Add Student
+  const addStudent = (name) => {
+    setStudents([...students, name]);
+  };
+
+  // Delete Student
+  const deleteStudent = (index) => {
+    const updatedList = students.filter((_, i) => i !== index);
+    setStudents(updatedList);
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Student Record Management</h1>
+
+      <StudentForm addStudent={addStudent} />
+
+      <StudentList
+        students={students}
+        deleteStudent={deleteStudent}
+      />
+    </div>
+  );
+}
+
+export default App;

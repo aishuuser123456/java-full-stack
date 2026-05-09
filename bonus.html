@@ -1,0 +1,8 @@
+<script>
+function showSummary() {
+    let events = document.querySelectorAll('input[name="event"]:checked');
+    let list = "";
+    events.forEach(e => list += e.value + ", ");
+    alert("Selected Events: " + list);
+}
+</script>
